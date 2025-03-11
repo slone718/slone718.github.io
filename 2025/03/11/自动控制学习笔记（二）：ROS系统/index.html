@@ -13,7 +13,7 @@
 
 
 
-<title>自动控制学习笔记（一）：ROS | CS&#39;BLOG</title>
+<title>自动控制学习笔记（二）：ROS系统 | CS&#39;BLOG</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">自动控制学习笔记（一）：ROS</h1>
+            <h1 class="post-title">自动控制学习笔记（二）：ROS系统</h1>
             
                 <div class="post-meta">
                     
@@ -205,7 +205,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 11, 2025&nbsp;&nbsp;20:01:17</a>
+                        Date: <a href="#">March 11, 2025&nbsp;&nbsp;20:28:11</a>
                         </span>
                     
                     
@@ -214,45 +214,34 @@
         </header>
 
         <div class="post-content">
-            <h1 id="自动控制学习笔记（一）：ROS——介绍与操作系统安装"><a href="#自动控制学习笔记（一）：ROS——介绍与操作系统安装" class="headerlink" title="自动控制学习笔记（一）：ROS——介绍与操作系统安装"></a>自动控制学习笔记（一）：ROS——介绍与操作系统安装</h1><h2 id="ROS系统介绍"><a href="#ROS系统介绍" class="headerlink" title="ROS系统介绍"></a><strong>ROS系统介绍</strong></h2><h4 id="用于实现机器人编程和开发复杂机器人应用程序的开源软件。需要安装在Linux的操作系统上。"><a href="#用于实现机器人编程和开发复杂机器人应用程序的开源软件。需要安装在Linux的操作系统上。" class="headerlink" title="用于实现机器人编程和开发复杂机器人应用程序的开源软件。需要安装在Linux的操作系统上。"></a>用于实现<strong>机器人编程</strong>和<strong>开发复杂机器人应用程序</strong>的开源软件。需要安装在Linux的操作系统上。</h4><p><strong>每个ROS系统，都有其对应的Ubuntu系统！</strong></p>
-<p>ROS中<strong>进程</strong>就是指的<strong>节点Node</strong>！<strong>几个节点</strong>，就是对应<strong>几个进程</strong>！</p>
-<p>分布式架构：机械臂导航、视觉、操控，分配给多个计算机。开发时也可分成多个模块，由多个组共同完成。每个部分可看作一个Node，再由roslaunch命令组合Node形成一个巨大工程。</p>
-<p>特点：扩展性好，软件复用率高</p>
-<h2 id="操作系统：Linux安装手册"><a href="#操作系统：Linux安装手册" class="headerlink" title="操作系统：Linux安装手册"></a>操作系统：Linux安装手册</h2><h3 id="1、下载Ubuntu-20-04系统镜像"><a href="#1、下载Ubuntu-20-04系统镜像" class="headerlink" title="1、下载Ubuntu 20.04系统镜像"></a>1、下载Ubuntu 20.04系统镜像</h3><p>访问Ubuntu官网：<a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a> </p>
-<p>或者清华源：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04/</a></p>
-<p><img src="https://pic4.zhimg.com/v2-f34e437295e2460b1de210e6781ed2bb_1440w.jpg" alt="img"></p>
-<p><img src="https://pic3.zhimg.com/v2-13b2b7ceaad77cf4c27bcfb9e491ceda_1440w.jpg" alt="img"></p>
-<h3 id="2、安装虚拟机VMware-Workstation"><a href="#2、安装虚拟机VMware-Workstation" class="headerlink" title="2、安装虚拟机VMware Workstation"></a>2、安装虚拟机VMware Workstation</h3><h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p>官网链接：<a target="_blank" rel="noopener" href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">Desktop Hypervisor Solutions | VMware</a></p>
-<p>或者百度网盘链接：</p>
-<p>通过网盘分享的文件：VMware-workstation-full-17.5.2-23775571.exe<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1M7T1kJu4rE6xyj42wqReIg?pwd=4vh5">https://pan.baidu.com/s/1M7T1kJu4rE6xyj42wqReIg?pwd=4vh5</a> 提取码: 4vh5<br>–来自百度网盘超级会员v6的分享</p>
-<h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><p>下载完成后，点击下一步-&gt;接收许可-&gt;下一步</p>
-<p>建议更改安装位置到C盘以外的盘，可以自己新建文件夹vmware方便查找，文件名最好不要有中文</p>
-<p>继续单击下一步-&gt;创建快捷方式等都默认下一步</p>
-<p>等待安装，安装完成</p>
-<p>可以点击许可证，输入密钥就可以使用了，密钥可以浏览器搜索一个拿来用，如果直接点击完成可以有试用的时间，也可以使用</p>
-<h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><p>安装完成之后打开，在最左边“库”一栏下方空白处，右键新建虚拟机：</p>
-<p>使用推荐-&gt;下一步-&gt;个性化，路径名称均可个性化更改，磁盘大小按需配置</p>
-<p>之后点击开启此虚拟机，点击右侧【Install Ubuntu】。</p>
-<p><img src="https://pic2.zhimg.com/v2-0e15ec1bccfa34cd13808dd5f2269a3f_r.jpg" alt="img"></p>
-<p>使用美国键盘布局【English（US）】，点击【Continue】</p>
-<p><img src="https://pic4.zhimg.com/v2-28ec99ddcafe65f41492647b20790591_1440w.jpg" alt="img"></p>
-<p>点击【Minimal installation】，点击【Continue】。由于Ubuntu虚拟机大多做学习研发使用，所以选择最小化安装。若是有用Ubuntu网上冲浪和打游戏的需求，请选择【Normal installation】</p>
-<p><img src="https://pic2.zhimg.com/v2-c483f78a2ce6b6d83fea6bdbfdf57d75_1440w.jpg" alt="img"></p>
-<p>选择【Erase disk and install Ubuntu】，点击【Install Now】</p>
-<p><img src="https://pic3.zhimg.com/v2-01f9b78c75fd3b2965769e099b9a1a0e_r.jpg" alt="img"></p>
-<p>点击地图上【中国】的位置，会默认出现Shanghai，点击【Continue】</p>
-<p><img src="https://pic1.zhimg.com/v2-789159b1e838b30f25e9418d29b338be_1440w.jpg" alt="img"></p>
-<p>输入【Your name】【Your computer’s name】【Pick a username】【Choose a password】【Confirm your password】后，点击【Continue】。这里建议密码设置的简单一些，因为Ubuntu后续很多操作需要验证密码，设置复杂的密码后期会比较麻烦</p>
-<p><img src="https://pic2.zhimg.com/v2-77abbe1480e9ca807b245f9b1321ada3_1440w.jpg" alt="img"></p>
-<p>等待安装。</p>
-<p><img src="https://pic4.zhimg.com/v2-015911a10c67cf581c6db267e89dcc05_1440w.jpg" alt="img"></p>
-<p>点击【Restart Now】重新启动</p>
-<p><img src="https://pic4.zhimg.com/v2-2e5b71ea445f4e1fa71620fe672eb3dd_r.jpg" alt="img"></p>
-<p>重新启动后，可以看到Ubuntu已经安装完成，点击出现的【用户名】。</p>
-<p><img src="https://pic2.zhimg.com/v2-755e6a48a3f625feccfadea2f59e97af_1440w.jpg" alt="img"></p>
-<p>输入密码即可进入Ubuntu</p>
-<p><img src="https://pic1.zhimg.com/v2-b0defe34ef9465880c984396853d7e80_1440w.jpg" alt="img"></p>
-<p><img src="https://pic3.zhimg.com/v2-caf0ff1a1cbf1515aa2f8f966faa0928_1440w.jpg" alt="img"></p>
+            <h1 id="Ubuntu20-04-ROS-Neotic安装"><a href="#Ubuntu20-04-ROS-Neotic安装" class="headerlink" title="Ubuntu20.04+ROS Neotic安装"></a><strong>Ubuntu20.04+ROS Neotic安装</strong></h1><p>官方说明：<a target="_blank" rel="noopener" href="https://wiki.ros.org/ROS/Installation">https://wiki.ros.org/ROS/Installation</a></p>
+<p>Ubuntu与ROS版本对应关系：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Ubuntu</th>
+<th align="left">ROS 1.0</th>
+<th align="left">ROS 2.0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">16.04 LTS</td>
+<td align="left">Kinetic LTS</td>
+<td align="left">Ardent</td>
+</tr>
+<tr>
+<td align="left">18.04 LTS</td>
+<td align="left">Melodic LTS</td>
+<td align="left">Dashing LTS</td>
+</tr>
+<tr>
+<td align="left">20.04 LTS</td>
+<td align="left">Noetic LTS</td>
+<td align="left">Foxy LTS</td>
+</tr>
+</tbody></table>
+<h2 id="开始安装："><a href="#开始安装：" class="headerlink" title="开始安装："></a>开始安装：</h2><p>假设已经看来笔记（一）或者已经安装完成Ubuntu系统，那么第一步：</p>
+<p>点击Ubuntu左下角的9个点，这个是类似于Windows键的一个功能，找到 softwave &amp; update选项，打开，打开后按照下图进行配置（确保你的”restricted”， “universe，” 和 “multiverse.”前是打上勾的）：</p>
 
         </div>
 
@@ -267,7 +256,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AROS/">http://example.com/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AROS/</a></span>
+                        <span><a href="http://example.com/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AROS%E7%B3%BB%E7%BB%9F/">http://example.com/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AROS%E7%B3%BB%E7%BB%9F/</a></span>
                     </p>
                 
                 
@@ -286,9 +275,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/"># 自动控制</a>
-                    
-                        <a href="/tags/Linux/"># Linux</a>
+                        <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6-ROS/"># -自动控制 -ROS</a>
                     
                         
                 </span>
@@ -301,10 +288,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AROS%E7%B3%BB%E7%BB%9F/">自动控制学习笔记（二）：ROS系统</a>
             
-            
-            <a class="next" rel="next" href="/2025/02/20/test/">test</a>
+            <a class="next" rel="next" href="/2025/03/11/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AROS/">自动控制学习笔记（一）：ROS</a>
             
         </section>
 
